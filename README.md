@@ -12,7 +12,7 @@ A aplicação foi estruturada seguindo princípios de Clean Code e Componentiza�
 - Utility-First CSS: Implementação de um design system responsivo e performático utilizando Tailwind CSS, garantindo um bundle final reduzido.
 
 📂 Organização do Projeto
-
+´´´´bash
 src/
 ├── components/
 │   ├── charts/    # Visualizações complexas de dados.
