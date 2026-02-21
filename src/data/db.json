@@ -1,0 +1,63 @@
+{
+  "resumo": {
+    "saldoTotal": "R$ 18.250,00",
+    "receitas": "R$ 25.400,00",
+    "despesas": "R$ 8.150,00"
+  },
+  "grafico": [
+    { "date": "01/02", "Receita": 4000, "Despesa": 2100 },
+    { "date": "05/02", "Receita": 3500, "Despesa": 1800 },
+    { "date": "10/02", "Receita": 5200, "Despesa": 2500 },
+    { "date": "15/02", "Receita": 4800, "Despesa": 750 }
+  ],
+  "categorias": [
+    { "name": "Aluguel", "value": 1200 },
+    { "name": "Marketing", "value": 2500 },
+    { "name": "Infra/Cloud", "value": 850 },
+    { "name": "Assinaturas", "value": 400 },
+    { "name": "Freelancers", "value": 2200 }
+  ],
+  "comparativoMensal": [
+    { "mes": "Nov 25", "Faturamento": 12000 },
+    { "mes": "Dez 25", "Faturamento": 18500 },
+    { "mes": "Jan 26", "Faturamento": 15200 },
+    { "mes": "Fev 26", "Faturamento": 25400 }
+  ],
+  "transacoes": [
+    {
+      "id": 1,
+      "name": "Projeto E-commerce",
+      "category": "Receita",
+      "amount": "R$ 8.500,00",
+      "status": "concluido"
+    },
+    {
+      "id": 2,
+      "name": "Servidores AWS",
+      "category": "Infra",
+      "amount": "R$ 450,00",
+      "status": "concluido"
+    },
+    {
+      "id": 3,
+      "name": "Anúncios Meta",
+      "category": "Marketing",
+      "amount": "R$ 1.200,00",
+      "status": "pendente"
+    },
+    {
+      "id": 3,
+      "name": "Anúncios Google",
+      "category": "Marketing",
+      "amount": "R$ 3.200,00",
+      "status": "pendente"
+    },
+    {
+      "id": 4,
+      "name": "Adobe Creative Cloud",
+      "category": "Assinaturas",
+      "amount": "R$ 124,00",
+      "status": "concluido"
+    }
+  ]
+}

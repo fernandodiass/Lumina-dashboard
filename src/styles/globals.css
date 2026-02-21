@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    /* Fundo azul-marinho profundo em vez de preto chapado */
+    @apply bg-[#030712] text-slate-100;
+  }
+}
+
+/* Customização para os cards do Tremor ficarem modernos */
+.tremor-card {
+  @apply bg-[#0f172a]/50 backdrop-blur-md border-slate-800/60 rounded-xl !important;
+  box-shadow: 0 4px 20px -5px rgba(0, 0, 0, 0.5);
+}
+
+/* Efeito de brilho nos títulos */
+.dashboard-title {
+  @apply bg-gradient-to-r from-white to-slate-500 bg-clip-text text-transparent;
+}
+/* Efeito de Vidro nos Cards */
+.tremor-Card-root {
+  background: rgba(15, 23, 42, 0.6) !important;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  border-radius: 16px !important;
+  transition: transform 0.2s ease-in-out;
+}
+
+.tremor-Card-root:hover {
+  transform: translateY(-4px);
+  border-color: rgba(168, 85, 247, 0.4) !important; /* Brilho roxo no hover */
+}
+
+/* Deixar as barras arredondadas (se a lib permitir via SVG) */
+.recharts-bar-rectangle path {
+  rx: 6; /* Arredonda os cantos das barras */
+}
