@@ -1,62 +1,16 @@
-💹 Lumina Dashboard
-
-Aplicação de alta performance para gestão financeira, desenvolvida com foco em visualização de dados e experiência do usuário (UX). O sistema utiliza uma arquitetura modular que separa rigorosamente a lógica de negócio da camada de interface.
-
-🧠 Arquitetura e Estrutura
-A estrutura de diretórios foi projetada para escalabilidade e fácil manutenção:
-
-Plaintext
-src/
+💹 Financeiro DashboardUma solução moderna de Business Intelligence para finanças pessoais ou empresariais. Esta aplicação transforma dados brutos em insights visuais através de gráficos interativos e uma interface limpa, focada em performance e usabilidade.🏗️ Arquitetura do ProjetoA estrutura segue o padrão de Feature-Based Folder Structure, facilitando a escalabilidade e o isolamento de componentes:Bashsrc/
 ├── components/
-│   ├── charts/    # Componentes de visualização (Category, Comparison, Finance)
-│   ├── layout/    # Estrutura de navegação (Sidebar, SummaryCards, Tables)
-│   └── ui/        # Átomos de interface e componentes base
-├── hooks/         # Hooks customizados para gerenciamento de estado (useFinanceData)
-├── pages/         # Views principais (Dashboard)
-├── data/          # Camada de persistência local (db.json)
-└── styles/        # Configurações globais de CSS e Tailwind
-
-Decisões Técnicas
-State Management: Uso de Custom Hooks (useFinanceData.ts) para encapsular a lógica de busca e filtragem de dados, permitindo que os componentes sejam puramente apresentacionais.
-
-Data Fetching: Estrutura preparada para integração com APIs REST, atualmente utilizando um arquivo JSON como fonte de dados mockada.
-
-Styling: Implementação de design responsivo via Tailwind CSS, garantindo consistência visual com baixo custo de performance.
-
-🛠️ Tecnologias Principais
-Core: React 18 + TypeScript
-
-Build Tool: Vite (para Hot Module Replacement ultra-rápido)
-
-Estilização: Tailwind CSS & PostCSS
-
-Qualidade de Código: ESLint & Prettier (configuração padrão Vite)
-
-🚀 Como Iniciar
-Siga os passos abaixo para rodar o projeto localmente:
-
-1. Clonar o repositório
-Bash
-git clone https://github.com/seu-usuario/financeiro-dashboard.git
-2. Instalar dependências
-Bash
-npm install
-# ou
-yarn install
-3. Executar o servidor de desenvolvimento
-Bash
-npm run dev
-Nota: Se o projeto utilizar o db.json como API mock, certifique-se de rodar o json-server em uma porta separada ou conforme configurado no seu ambiente.
-
-📋 Funcionalidades Implementadas
-[x] Dashboard interativo com gráficos de categorias.
-
-[x] Comparativo financeiro mensal/anual.
-
-[x] Sidebar de navegação dinâmica.
-
-[x] Cards de resumo com métricas principais (entradas/saídas).
-
-[x] Tabela de transações detalhada.
-
-Desenvolvido por Fernando Dias
+│   ├── charts/      # Visualizações: Category, Comparison e FinanceChart
+│   ├── layout/      # Estrutura: Sidebar, SummaryCards e TransactionTable
+│   └── ui/          # Design System: Componentes base (Botões, Inputs)
+├── hooks/           # Business Logic: useFinanceData.ts (Custom Hooks)
+├── pages/           # Views: Dashboard principal e rotas
+├── data/            # Persistência: Mock de dados via db.json
+├── lib/             # Configurações de bibliotecas externas
+└── styles/          # Core: Estilização global e Tailwind Config
+🛠️ Stack TecnológicaCamadaFerramentaDescriçãoFrontendReactBiblioteca core para interfaces reativas.TipagemTypeScriptGarantia de integridade de dados e DX (Developer Experience).Build ToolViteFerramenta de build de próxima geração com HMR instantâneo.CSSTailwindFramework utility-first para estilização rápida e responsiva.MockingJSON ServerSimulação de API REST para persistência local.🚀 Como ExecutarPré-requisitosNode.js (v18+)Gerenciador de pacotes (NPM, Yarn ou PNPM)Passo a PassoClone o repositório:Bashgit clone https://github.com/seu-usuario/financeiro-dashboard.git
+cd financeiro-dashboard
+Instale as dependências:Bashnpm install
+Suba o Mock de Dados (Opcional/Se aplicável):Bashnpx json-server --watch src/data/db.json --port 3001
+Inicie o servidor de desenvolvimento:Bashnpm run dev
+📈 Funcionalidades ChaveDashboard Executivo: Visão holística de receitas e despesas.Análise de Categorias: Gráficos detalhando para onde o capital está sendo direcionado.Gestão de Fluxo: Tabela de transações com histórico completo.Responsividade Total: Interface adaptável para Mobile, Tablet e Desktop.Custom Hooks: Abstração de toda a lógica de fetch e estados financeiros.📄 LicençaEste projeto está sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.ContatoDesenvolvido por Fernando Dias
