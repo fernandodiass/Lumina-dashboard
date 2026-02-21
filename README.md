@@ -1,68 +1,62 @@
-💹 Financial Management Dashboard
+💹 Lumina Dashboard
 
-Uma plataforma robusta de análise financeira projetada para fornecer insights em tempo real sobre transações, fluxos de caixa e distribuição de categorias. O sistema foca em performance, tipagem estrita e visualização de dados modular.
+Aplicação de alta performance para gestão financeira, desenvolvida com foco em visualização de dados e experiência do usuário (UX). O sistema utiliza uma arquitetura modular que separa rigorosamente a lógica de negócio da camada de interface.
 
-🏗️ Arquitetura e Decisões Técnicas
+🧠 Arquitetura e Estrutura
+A estrutura de diretórios foi projetada para escalabilidade e fácil manutenção:
 
-A aplicação foi estruturada seguindo princípios de Clean Code e Componentização Atômica:
-
-- Custom Hooks Pattern: A lógica de consumo de dados e estados complexos foi abstraída em useFinanceData.ts, separando a regra de negócio da camada de apresentação (UI).
-- Modular Charts: Os componentes de visualização (CategoryChart, ComparisonChart) são independentes e alimentados via props, facilitando a manutenção e a troca de bibliotecas de gráficos (como Recharts ou Chart.js).
-- Type Safety: Uso extensivo de interfaces TypeScript para garantir a integridade dos dados financeiros em todo o fluxo da aplicação, desde o db.json até os componentes de UI.
-- Utility-First CSS: Implementação de um design system responsivo e performático utilizando Tailwind CSS, garantindo um bundle final reduzido.
-
-📂 Organização do Projeto
-´´´´bash
+Plaintext
 src/
 ├── components/
-│   ├── charts/    # Visualizações complexas de dados.
-│   ├── layout/    # Componentes estruturais (Sidebar, Navbar, Shell).
-│   └── ui/        # Design System (Botões, Inputs, Cards).
-├── hooks/         # Lógica de negócio reutilizável e fetch de dados.
-├── lib/           # Configurações de bibliotecas externas e instâncias de API.
-├── pages/         # Views principais da aplicação (Dashboard).
-└── data/          # Mock local para simulação de persistência de dados.
+│   ├── charts/    # Componentes de visualização (Category, Comparison, Finance)
+│   ├── layout/    # Estrutura de navegação (Sidebar, SummaryCards, Tables)
+│   └── ui/        # Átomos de interface e componentes base
+├── hooks/         # Hooks customizados para gerenciamento de estado (useFinanceData)
+├── pages/         # Views principais (Dashboard)
+├── data/          # Camada de persistência local (db.json)
+└── styles/        # Configurações globais de CSS e Tailwind
 
-🛠️ Stack Tecnológica
+Decisões Técnicas
+State Management: Uso de Custom Hooks (useFinanceData.ts) para encapsular a lógica de busca e filtragem de dados, permitindo que os componentes sejam puramente apresentacionais.
 
-Camada       Tecnologia     Motivação
-Frontend     React 18+      Reatividade eficiente e ecossistema maduro.
-Linguagem    TypeScript     Robustez, autocompletação e prevenção de erros em runtime.
-Estilização  Tailwind CSS   Agilidade no desenvolvimento e consistência visual.
-Build Tool   Vite           Hot Module Replacement (HMR) instantâneo para DX superior.
-Mocks        JSON Server    Simulação de ambiente de produção para testes de integração.
+Data Fetching: Estrutura preparada para integração com APIs REST, atualmente utilizando um arquivo JSON como fonte de dados mockada.
 
-🚀 Como Executar o Projeto
+Styling: Implementação de design responsivo via Tailwind CSS, garantindo consistência visual com baixo custo de performance.
 
-1. **Clonagem e Dependências:**
+🛠️ Tecnologias Principais
+Core: React 18 + TypeScript
+
+Build Tool: Vite (para Hot Module Replacement ultra-rápido)
+
+Estilização: Tailwind CSS & PostCSS
+
+Qualidade de Código: ESLint & Prettier (configuração padrão Vite)
+
+🚀 Como Iniciar
+Siga os passos abaixo para rodar o projeto localmente:
+
+1. Clonar o repositório
 Bash
-git clone https://github.com/fernandodiass/Lumina-dashboard.git
-cd finance-dashboard
+git clone https://github.com/seu-usuario/financeiro-dashboard.git
+2. Instalar dependências
+Bash
 npm install
-
-2. **Ambiente de Desenvolvimento:**
-Inicie o mock server e a aplicação simultaneamente (ou em terminais separados):
-
+# ou
+yarn install
+3. Executar o servidor de desenvolvimento
 Bash
-# Terminal 1: Mock API
-npx json-server --watch src/data/db.json --port 3001
-
-# Terminal 2: Vite Dev Server
 npm run dev
+Nota: Se o projeto utilizar o db.json como API mock, certifique-se de rodar o json-server em uma porta separada ou conforme configurado no seu ambiente.
 
-3. **Build de Produção:**
+📋 Funcionalidades Implementadas
+[x] Dashboard interativo com gráficos de categorias.
 
-Bash
-npm run build
+[x] Comparativo financeiro mensal/anual.
 
-📈 Roadmap de Evolução:
+[x] Sidebar de navegação dinâmica.
 
-- [ ] Integração com API Real (Node.js/Python).
+[x] Cards de resumo com métricas principais (entradas/saídas).
 
-- [ ] Autenticação via JWT ou NextAuth.
+[x] Tabela de transações detalhada.
 
-- [ ] Exportação de relatórios em PDF/CSV.
-
-- [ ] Modo Escuro (Dark Mode) nativo.
-
-Desenvolvido por Fernando Dias - 2026
+Desenvolvido por Fernando Dias
