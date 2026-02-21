@@ -1,4 +1,4 @@
-# 💹 LUMINA DASHBOARD FINANCEIRO
+💹 LUMINA DASHBOARD
 
 Uma solução moderna de Business Intelligence para finanças pessoais ou empresariais.  
 Esta aplicação transforma dados brutos em insights visuais através de gráficos interativos e uma interface limpa, focada em performance e usabilidade.
@@ -19,7 +19,8 @@ src/
 ├── lib/             # Configurações de bibliotecas externas
 └── styles/          # Core: Estilização global e Tailwind Config
 
-🛠️ STACK TECNOLÓGICA
+
+*🛠️ STACK TECNOLÓGICA
 
 | Camada     | Ferramenta  | Descrição                                                     |
 | ---------- | ----------- | ------------------------------------------------------------- |
@@ -29,18 +30,15 @@ src/
 | CSS        | Tailwind    | Framework utility-first para estilização rápida e responsiva. |
 | Mocking    | JSON Server | Simulação de API REST para persistência local.                |
 
-🚀 COMO EXECUTAR
+*🚀 COMO EXECUTAR
 
-Pré-requisitos
+Pré-requisitos:
+Node.js (v18+)
+Gerenciador de pacotes (NPM, Yarn ou PNPM)
 
-- Node.js (v18+)
-- Gerenciador de pacotes (NPM, Yarn ou PNPM)
-
-Passo a passo
-
-1. Clone o repositório:
-git clone #https://github.com/fernandodiass/Lumina-dashboard.git
-cd financeiro-dashboard
+*Passo a passo:
+1. Clone o repositório
+git clone https://github.com/fernandodiass/Lumina-dashboard.git
 
 2. Instale as dependências:
 npm install
@@ -51,23 +49,20 @@ npx json-server --watch src/data/db.json --port 3001
 4. Inicie o servidor de desenvolvimento:
 npm run dev
 
-📈 FUNCIONALIDADES
+
+*📈 FUNCIONALIDADES
 
 Dashboard Executivo: visão holística de receitas e despesas.
-
 Análise de Categorias: gráficos detalhando para onde o capital está sendo direcionado.
-
 Gestão de Fluxo: tabela de transações com histórico completo.
-
 Responsividade Total: interface adaptável para Mobile, Tablet e Desktop.
-
 Custom Hooks: abstração de toda a lógica de fetch e estados financeiros.
 
-📄 LICENÇA
+*📄 LICENÇA
 
 Este projeto está sob a licença MIT.
 Veja o arquivo LICENSE para mais detalhes.
 
-📬 CONTATO
+*📬 CONTATO
 
 Desenvolvido por Fernando Dias
