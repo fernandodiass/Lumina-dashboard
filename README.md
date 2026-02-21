@@ -39,7 +39,7 @@ Pré-requisitos
 Passo a passo
 
 1. Clone o repositório:
-git clone https://github.com/seu-usuario/financeiro-dashboard.git
+git clone #https://github.com/fernandodiass/Lumina-dashboard.git
 cd financeiro-dashboard
 
 2. Instale as dependências:
