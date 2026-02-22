@@ -49,6 +49,12 @@ npx json-server --watch src/data/db.json --port 3001
 4. Inicie o servidor de desenvolvimento:
 npm run dev
 
+## 🌐 Deploy (Vercel)
+
+Esta aplicação está configurada para deploy estático na Vercel. 
+Os dados financeiros são consumidos de forma **read-only** através do arquivo `public/data/db.json`.
+
+Para garantir que as rotas funcionem corretamente após o reload, o projeto inclui um arquivo `vercel.json` com configurações de rewrite para o `index.html`.
 
 *📈 FUNCIONALIDADES
 
