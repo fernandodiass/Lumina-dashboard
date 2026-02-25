@@ -11,7 +11,7 @@ export function SummaryCards() {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
       {items.map((item) => (
         <div key={item.title} className={`bg-slate-900/50 p-6 rounded-3xl border-t-4 ${item.color} border-x border-b border-slate-800 shadow-xl backdrop-blur-md`}>
           <div className="flex justify-between items-center mb-4">
